@@ -7,13 +7,11 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import java.lang.reflect.Array;
 import java.util.List;
 
 /**
  * Created by Andy on 30.01.2017.
  */
-
 
 
 public class TransactionAdapter extends ArrayAdapter<Transactions> {
@@ -37,13 +35,14 @@ public class TransactionAdapter extends ArrayAdapter<Transactions> {
         // Lookup view for data population
         TextView tvName = (TextView) convertView.findViewById(R.id.name);
         TextView tvSum = (TextView) convertView.findViewById(R.id.sum);
-        TextView tvDate = (TextView) convertView.findViewById(R.id.date);
+        // TextView tvDate = (TextView) convertView.findViewById(R.id.date);
         // Populate the data into the template view using the data object
 
         tvName.setText(transaction.title);
-        tvDate.setText(transaction.mDate.toString());
+        // tvDate.setText(transaction.mDate.toString());
 
-        tvSum.setText(Integer.toString(transaction.sum));
+        // tvSum.setText(Integer.toString(transaction.sum));
+        tvSum.setText(transaction.sum);
 
 
         return convertView;
